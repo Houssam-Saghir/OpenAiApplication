@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAiApplication", "OpenAiApplication\OpenAiApplication.csproj", "{87689ACF-28F0-4150-9620-BE97F938089F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAiRAG", "OpenAiRAG\OpenAiRAG.csproj", "{C2EA7F3C-D47D-4C2F-A9D2-8C7F92D26306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticKernelTest", "SemanticKernelTest\SemanticKernelTest.csproj", "{DA35E46B-29AE-4CB1-9137-376821D69289}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgenticExample", "AgenticExample\AgenticExample.csproj", "{0831D71B-C428-431B-82C7-292A432EAD1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CvReader", "CvReader\CvReader.csproj", "{CA14F2A3-964A-4643-910E-33FAFA47964B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKVectorIngest", "SKVectorIngest\SKVectorIngest.csproj", "{13F8009F-0F27-4FD6-91E0-97E198C83724}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87689ACF-28F0-4150-9620-BE97F938089F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87689ACF-28F0-4150-9620-BE97F938089F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87689ACF-28F0-4150-9620-BE97F938089F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87689ACF-28F0-4150-9620-BE97F938089F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2EA7F3C-D47D-4C2F-A9D2-8C7F92D26306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2EA7F3C-D47D-4C2F-A9D2-8C7F92D26306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2EA7F3C-D47D-4C2F-A9D2-8C7F92D26306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2EA7F3C-D47D-4C2F-A9D2-8C7F92D26306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA35E46B-29AE-4CB1-9137-376821D69289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA35E46B-29AE-4CB1-9137-376821D69289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA35E46B-29AE-4CB1-9137-376821D69289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA35E46B-29AE-4CB1-9137-376821D69289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0831D71B-C428-431B-82C7-292A432EAD1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0831D71B-C428-431B-82C7-292A432EAD1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0831D71B-C428-431B-82C7-292A432EAD1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0831D71B-C428-431B-82C7-292A432EAD1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA14F2A3-964A-4643-910E-33FAFA47964B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA14F2A3-964A-4643-910E-33FAFA47964B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA14F2A3-964A-4643-910E-33FAFA47964B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA14F2A3-964A-4643-910E-33FAFA47964B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F8009F-0F27-4FD6-91E0-97E198C83724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F8009F-0F27-4FD6-91E0-97E198C83724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F8009F-0F27-4FD6-91E0-97E198C83724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F8009F-0F27-4FD6-91E0-97E198C83724}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
