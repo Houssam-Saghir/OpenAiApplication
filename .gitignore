@@ -359,5 +359,12 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
