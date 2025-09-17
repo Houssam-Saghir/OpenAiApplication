@@ -2,7 +2,7 @@
 using OpenAiApplication;
 using System.Text.Json;
 
-var apiKey = "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";
+var apiKey = "key";
 
 
 ChatClient client = new("gpt-4-turbo", apiKey);

@@ -7,7 +7,8 @@ using Microsoft.SemanticKernel.Connectors.OpenAI;
 
 // Populate values from your OpenAI deployment
 var modelId = "gpt-4";
-var apiKey = "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";
+
+var apiKey = "some key";
 
 // Create a kernel with Azure OpenAI chat completion
 var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(modelId, apiKey);
