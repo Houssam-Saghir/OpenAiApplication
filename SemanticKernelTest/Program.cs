@@ -7,7 +7,7 @@ using Microsoft.SemanticKernel.Connectors.OpenAI;
 
 // Populate values from your OpenAI deployment
 var modelId = "gpt-4";
-var apiKey = "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";
+var apiKey = "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";
 
 // Create a kernel with Azure OpenAI chat completion
 var builder = Kernel.CreateBuilder().AddOpenAIChatCompletion(modelId, apiKey);
@@ -19,17 +19,39 @@ builder.Services.AddLogging(services => services.AddConsole().SetMinimumLevel(Lo
 Kernel kernel = builder.Build();
 var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
 
-// Add a plugin (the LightsPlugin class is defined below)
+// Add static plugin
 kernel.Plugins.AddFromType<LightsPlugin>("Lights");
+
+// Create dynamic function manager
+var dynamicFunctionManager = new DynamicFunctionManager(kernel);
+
+// Create the Leave_Balance function dynamically
+dynamicFunctionManager.CreateLeaveBalanceFunction("HRPlugin");
+
 
 // Enable planning
 OpenAIPromptExecutionSettings openAIPromptExecutionSettings = new()
 {
-    FunctionChoiceBehavior = FunctionChoiceBehavior.Required()
+    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
 };
 
 // Create a history store the conversation
 var history = new ChatHistory();
+
+// Add system message explaining available functions
+var systemMessage = @"You are an AI assistant with access to various plugins:
+
+Static Functions:
+- Lights plugin: get_lights, change_state
+- LightsPlugin.Leave_Balance (but this is placeholder)
+
+Dynamic Functions:
+- HRPlugin.Leave_Balance: Submit leave requests with start date, end date, and leave code
+
+You can help users with lighting control, leave requests, text formatting, and calculations.
+For leave requests, use the format dd/MM/yyyy for dates.";
+
+history.AddSystemMessage(systemMessage);
 
 // Initiate a back-and-forth chat
 string? userInput;
@@ -38,6 +60,9 @@ do
     // Collect user input
     Console.Write("User > ");
     userInput = Console.ReadLine();
+
+
+    if (string.IsNullOrEmpty(userInput)) continue;
 
     // Add user input
     history.AddUserMessage(userInput);

@@ -36,13 +36,13 @@ public class LightsPlugin
         return light;
     }
 
-    [KernelFunction("Leave_Balance")]
-    [Description("Submit a leave request with all the information. Date format is dd/MM/yyyy")]
-    public async Task<LightModel?> SubmitLeaveRequest(DateTime startDate , DateTime endDate, string code)
-    {
+    //[KernelFunction("Leave_Balance")]
+    //[Description("Submit a leave request with all the information. Date format is dd/MM/yyyy")]
+    //public async Task<LightModel?> SubmitLeaveRequest(DateTime startDate , DateTime endDate, string code)
+    //{
 
-        return null;
-    }
+    //    return null;
+    //}
 }
 
 public class LightModel
